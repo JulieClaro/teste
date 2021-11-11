@@ -1,0 +1,42 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var a=prompt("Lado 1:");
+    var b=prompt("Lado 2:");
+    var c=prompt("Lado 3:");
+    a=parseInt(a);
+    b=parseInt(b);
+    c=parseInt(c);
+    triangulo();
+    function triangulo(){
+        if ((a<b+c)&& (b<a+c) && (c<a+b)){
+            sit1="É um triângulo"; 
+        }else
+        sit1="Não é um triângulo";       
+        if ((a==b)&& (b==c)&& (c==a)){
+             sit="equilátero";           
+         }
+         if ((a==b)|| (b==c)|| (c==b)){             
+             sit="isóceles";
+         }
+         if ((a!=b) && (b!==c)&& (c!==b)){       
+         sit="escaleno";   
+         }            
+        }
+        document.write("Lado 1:"+a);
+        document.write("</br+");
+        document.write("Lado 2:"+b);
+        document.write("</br+");
+        document.write("Lado 3:"+c);
+        document.write("</br+");
+        document.write(+sit1);
+        document.write("</br+");
+        document.write("O triângulo é: " +sit);
+        document.write("</br>");        
+    </script>    
+</body>
+</html>
